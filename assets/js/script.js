@@ -12,8 +12,12 @@ $(document).ready(function() {
     	e.preventDefault();
     	e.stopPropagation();
     })
-    $(".create__select").change(function(){
-    	var valor = $(".create__select option:selected").val()
+    $("#image").change(function(){
+    	var valor = $("#image option:selected").val()
     	$(".create__image").children().attr("src", "assets/images/squared/" + valor)
+    })
+    $("#author").change(function(){
+    	var valores = $("#author option:selected").val()
+    	$(".create__profile").children().attr("src", "assets/images/profiles/" + valores)
     })
 });
