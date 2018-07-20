@@ -7,8 +7,13 @@ $(document).ready(function() {
     	event.stopPropagation();
     	//$(this).attr("href", " ")
     })
-    $(".card__follow-btn").on("click", function(event){
+    $(".card__follow-btn").on("click", function(e){
     	$(this).toggleClass("card__follow-btn--following");
-    	event.stopPropagation();
+    	e.preventDefault();
+    	e.stopPropagation();
+    })
+    $(".create__select").change(function(){
+    	var valor = $(".create__select option:selected").val()
+    	$(".create__image").children().attr("src", "assets/images/squared/" + valor)
     })
 });
