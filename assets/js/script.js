@@ -20,4 +20,11 @@ $(document).ready(function() {
     	var valores = $("#author option:selected").val()
     	$(".create__profile").children().attr("src", "assets/images/profiles/" + valores)
     })
+    $(".create__form").submit(function(e){
+    	var nombre = $("#name").val();
+    	var follow = $("#followers").val();
+    	var like = $("#likes").val();
+    	var following = $("#following").val();
+    	e.preventDefault();
+    })
 });
